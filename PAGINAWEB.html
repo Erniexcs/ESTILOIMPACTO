@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstiloImpacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      :root {
+    --color-texto: #333;
+    --color-fondo-claro: #f5f5f5;
+    --color-fondo-oscuro: #333;
+    --color-enlace: #333;
+    --color-enlace-hover: #ff5733;
+}
+.persona {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.persona img {
+    max-width: 100%;
+    height: auto;
+}
+
+.persona figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+    
+<header>
+    <h1>EstiloImpacto</h1>
+    <h2>Tu esencia, nuestro diseño</h2>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#logros">Logros</a></li>
+        <li><a href="#busqueda">Búsqueda</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#estilos">Estilos</a></li>
+        <li><a href="#colores_moda">Colores de Moda</a></li>
+        <li><a href="#ropa_tendencia">Ropa de Tendencia</a></li>
+        <li><a href="#formulario_contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="presentacion" class="seccion mostrar">
+        <h3>Presentación</h3>
+        <p>EstiloImpacto es una agencia creativa dedicada a crear impacto a través del diseño web y gráfico. Nuestro objetivo es proporcionar soluciones de diseño únicas y atractivas que reflejen la esencia de nuestros clientes.</p>
+        <P>Somos un pequeño grupo de desarrolladores que usamos la imaginación que nos entregó el programa los BACKYARDIGANS para poder diseñar esta página web; por tal motivo también nos llamamos los backyardigans</P>
+        <h3>INTEGRANTES</h3>
+        <div class="GRUPO">
+            <figure class="persona">
+                <img src="pablo.jpg" alt="pablo" class="Rafael">
+                <figcaption>Alberto Rafael</figcaption>
+            </figure>
+            <figure class="persona">
+                <img src="austin.jpg" alt="austin" class="Ernie">
+                <figcaption>Ernie Fabian</figcaption>
+            </figure>
+            <figure class="persona">
+                <img src="uniqua.jpg" alt="uniqua" class="Ronal">
+                <figcaption>Ronald Jeanpiere</figcaption>
+            </figure>
+            <figure class="persona">
+                <img src="taryon.jpg" alt="taryon" class="Juan">
+                <figcaption>Juan Manuel</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="logros" class="seccion mostrar">
+        <h3>Logros</h3>
+        <p>A lo largo de nuestra trayectoria, hemos tenido el privilegio de colaborar con marcas reconocidas a nivel nacional e internacional. Nuestro equipo de diseñadores y creativos ha sido galardonado por su excelencia en diseño y ha contribuido a la imagen de muchas empresas.</p>
+    </section>
+
+    <section id="busqueda" class="seccion mostrar">
+        <h3>Búsqueda</h3>
+        <div class="busqueda-formulario">
+            <input type="text" id="busquedaTexto" placeholder="Escribe aquí para buscar...">
+            <button onclick="buscar()"><i class="fas fa-search"></i> Buscar</button>
+        </div>
+    </section>
+
+    <section id="galeria" class="mostrar">
+        <h3>Galería</h3>
+        <div class="galeria-imagenes">
+            <img src="adidas.jpg" alt="adidas">
+            <img src="columbia.jpg" alt="columbia">
+            <img src="levis.jpg" alt="levis">
+        </div>
+        
+        
+        <button onclick="mostrarAnteriorGaleria()">Anterior</button>
+        <button onclick="mostrarSiguienteGaleria()">Siguiente</button>
+    </section>
+
+    <section id="estilos" class="seccion">
+        <h3>Estilos</h3>
+        <div class="galeria-imagenes">
+            <img src="casual.jpg" alt="casual">
+            <img src="deportivo.jpg" alt="deportivo">
+            <img src="vintage.jpg" alt="vintage">
+        </div>
+        
+        <button onclick="mostrarAnteriorEstilos()">Anterior</button>
+        <button onclick="mostrarSiguienteEstilos()">Siguiente</button>
+    </section>
+
+    <section id="colores_moda" class="seccion">
+        <h3>Colores de Moda</h3>
+        <div class="galeria-imagenes">
+            <img src="pastel.jpg" alt="pastel">
+            <img src="negro.jpg" alt="negro">
+            <img src="naranja primavera.jpg" alt="naranja primavera">
+        </div>
+        <button onclick="mostrarAnteriorColoresModa()">Anterior</button>
+        <button onclick="mostrarSiguienteColoresModa()">Siguiente</button>
+    </section>
+
+    <section id="ropa_tendencia" class="seccion">
+        <h3>Ropa de Tendencia</h3>
+        <div class="galeria-imagenes">
+            <img src="oversize.jpg" alt="oversize">
+            <img src="pijama.jpg" alt="pijama">
+            <img src="joggers.jpg" alt="juanito">
+        </div>
+        <button onclick="mostrarAnteriorRopaTendencia()">Anterior</button>
+        <button onclick="mostrarSiguienteRopaTendencia()">Siguiente</button>
+    </section>
+
+    <section id="formulario_contacto" class="seccion">
+        <h3>Tienes algunas dudas? Contáctanos</h3>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_email" />
+                </li>
+                <li>
+                    <label for="msg">Mensaje:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Envía tu mensaje</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+
+</main>
+
+<footer id="piePagina">
+    <p>&copy; 2023 EstiloImpacto - GRUPO LOS BACKYARDIGANS</p>
+</footer>
+
+
+
+<script>
+    function buscar() {
+        var input = document.getElementById('busquedaTexto').value.toLowerCase();
+        window.location.hash = input.replace(/ /g, "_");
+    }
+
+    function mostrarSeccion(id) {
+        var secciones = document.querySelectorAll('section');
+        secciones.forEach(function(seccion) {
+            seccion.classList.remove('mostrar');
+        });
+        document.getElementById(id).classList.add('mostrar');
+    }
+    function mostrarSiguienteColoresModa() {
+    var imagenes = document.querySelectorAll('#colores_moda .galeria-imagenes img');
+    var actual = document.querySelector('#colores_moda .galeria-imagenes img:not([style*="display: none"])');
+    var siguiente = actual.nextElementSibling;
+
+    if (siguiente) {
+        actual.style.display = 'none';
+        siguiente.style.display = 'block';
+    }
+}
+
+function mostrarAnteriorColoresModa() {
+    var imagenes = document.querySelectorAll('#colores_moda .galeria-imagenes img');
+    var actual = document.querySelector('#colores_moda .galeria-imagenes img:not([style*="display: none"])');
+    var anterior = actual.previousElementSibling;
+
+    if (anterior) {
+        actual.style.display = 'none';
+        anterior.style.display = 'block';
+    }
+}
+
+function mostrarSiguienteRopaTendencia() {
+    var imagenes = document.querySelectorAll('#ropa_tendencia .galeria-imagenes img');
+    var actual = document.querySelector('#ropa_tendencia .galeria-imagenes img:not([style*="display: none"])');
+    var siguiente = actual.nextElementSibling;
+
+    if (siguiente) {
+        actual.style.display = 'none';
+        siguiente.style.display = 'block';
+    }
+}
+
+function mostrarAnteriorRopaTendencia() {
+    var imagenes = document.querySelectorAll('#ropa_tendencia .galeria-imagenes img');
+    var actual = document.querySelector('#ropa_tendencia .galeria-imagenes img:not([style*="display: none"])');
+    var anterior = actual.previousElementSibling;
+
+    if (anterior) {
+        actual.style.display = 'none';
+        anterior.style.display = 'block';
+    }
+}
+</script>
+
+</body>
+</html>
